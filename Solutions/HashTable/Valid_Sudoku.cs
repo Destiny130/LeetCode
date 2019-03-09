@@ -34,8 +34,8 @@ namespace Solutions.HashTable
             {
                 for (int j = 0; j < 9; ++j)
                 {
-                    if (board[i, j] != '.' && (!set.Add(board[i, j] + "in row" + i.ToString()) 
-                                               || !set.Add(board[i, j] + "in column" + j.ToString()) 
+                    if (board[i, j] != '.' && (!set.Add(board[i, j] + "in row" + i.ToString())
+                                               || !set.Add(board[i, j] + "in column" + j.ToString())
                                                || !set.Add(board[i, j] + "in block" + i / 3 + "-" + j / 3)))
                         return false;
                 }
