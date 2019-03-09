@@ -11,10 +11,9 @@ namespace Solutions.LinkedList
             for (; curr != null; ++len)
                 curr = curr.next;
             k %= len;
-            if (k == 0)
+            if (k-- == 0)
                 return head;
             ListNode fast = head;
-            --k;
             for (; k > 0; --k)
                 fast = fast.next;
 
