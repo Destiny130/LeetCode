@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array\Two_Sum.cs" />
+    <Compile Include="HashTable\Group_Anagrams.cs" />
     <Compile Include="HashTable\Valid_Sudoku.cs" />
     <Compile Include="LinkedList\Add_Two_Numbers.cs" />
     <Compile Include="LinkedList\ListNode.cs" />

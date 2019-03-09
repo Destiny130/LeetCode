@@ -12,7 +12,7 @@ namespace TestCases
         static void Main()
         {
             Two_Sum_Test.Execute();
-
+            
             Console.ReadKey();
         }
     }
