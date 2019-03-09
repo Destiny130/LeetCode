@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Solutions.Tree
+namespace Solutions.BinaryTree
 {
     public class Unique_Binary_Search_Trees_II
     {

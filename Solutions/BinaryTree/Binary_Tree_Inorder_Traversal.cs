@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Solutions.Tree
+namespace Solutions.BinaryTree
 {
     public class Binary_Tree_Inorder_Traversal
     {
