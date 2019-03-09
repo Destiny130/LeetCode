@@ -29,7 +29,7 @@ namespace Solutions.HashTable
         //Use one hash set
         public bool IsValidSudoku_O(char[,] board)
         {
-            HashSet<string> set = new HashSet<string>();
+            HashSet<string> set = new HashSet<string>(); 
             for (int i = 0; i < 9; ++i)
             {
                 for (int j = 0; j < 9; ++j)
