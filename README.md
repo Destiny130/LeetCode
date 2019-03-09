@@ -1,1 +1,1 @@
-# LeetCode solution records
+# LeetCode submission records
