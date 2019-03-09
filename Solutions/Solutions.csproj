@@ -46,6 +46,7 @@
     <Compile Include="LinkedList\Merge_k_Sorted_Lists.cs" />
     <Compile Include="LinkedList\Merge_Two_Sorted_Lists.cs" />
     <Compile Include="LinkedList\Remove_Nth_Node_From_End_of_List.cs" />
+    <Compile Include="LinkedList\Rotate_List.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\Binary_Tree_Inorder_Traversal.cs" />
     <Compile Include="Tree\TreeNode.cs" />
