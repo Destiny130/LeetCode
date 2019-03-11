@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Solutions.Math
+namespace Solutions.Math_LC
 {
     public class Clumsy_Factorial
     {
