@@ -1,4 +1,4 @@
-namespace Solutions.Math
+namespace Solutions.Math_LC
 {
     public class Count_Primes
     {
