@@ -1,4 +1,4 @@
-﻿namespace Solutions.LinkedList
+﻿namespace Solutions.LinkedList_LC
 {
     public class Add_Two_Numbers
     {

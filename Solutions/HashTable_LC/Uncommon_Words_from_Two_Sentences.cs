@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Solutions.HashTable
+namespace Solutions.HashTable_LC
 {
     class Uncommon_Words_from_Two_Sentences
     {

@@ -1,4 +1,4 @@
-﻿namespace Solutions.LinkedList
+﻿namespace Solutions.LinkedList_LC
 {
     public class Remove_Nth_Node_From_End_of_List
     {

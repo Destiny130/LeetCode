@@ -40,26 +40,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Array\Minimum_Domino_Rotations_For_Equal_Row.cs" />
-    <Compile Include="Array\Two_Sum.cs" />
-    <Compile Include="BinaryTree\Construct_Binary_Search_Tree_from_Preorder_Traversal.cs" />
-    <Compile Include="HashTable\Design_HashMap.cs" />
-    <Compile Include="HashTable\Design_HashSet.cs" />
-    <Compile Include="HashTable\DoublyLinkedList.cs" />
-    <Compile Include="HashTable\Group_Anagrams.cs" />
-    <Compile Include="HashTable\MyLinkedList.cs" />
-    <Compile Include="HashTable\Valid_Sudoku.cs" />
-    <Compile Include="LinkedList\Add_Two_Numbers.cs" />
-    <Compile Include="LinkedList\ListNode.cs" />
-    <Compile Include="LinkedList\Merge_k_Sorted_Lists.cs" />
-    <Compile Include="LinkedList\Merge_Two_Sorted_Lists.cs" />
-    <Compile Include="LinkedList\Remove_Nth_Node_From_End_of_List.cs" />
-    <Compile Include="LinkedList\Rotate_List.cs" />
-    <Compile Include="Math\Clumsy_Factorial.cs" />
+    <Compile Include="Array_LC\Minimum_Domino_Rotations_For_Equal_Row.cs" />
+    <Compile Include="Array_LC\Two_Sum.cs" />
+    <Compile Include="BinaryTree_LC\Construct_Binary_Search_Tree_from_Preorder_Traversal.cs" />
+    <Compile Include="HashTable_LC\Design_HashMap.cs" />
+    <Compile Include="HashTable_LC\Design_HashSet.cs" />
+    <Compile Include="HashTable_LC\DoublyLinkedList.cs" />
+    <Compile Include="HashTable_LC\Find_the_Difference.cs" />
+    <Compile Include="HashTable_LC\Group_Anagrams.cs" />
+    <Compile Include="HashTable_LC\MyLinkedList.cs" />
+    <Compile Include="HashTable_LC\N_Repeated_Element_in_Size_2N_Array.cs" />
+    <Compile Include="HashTable_LC\Uncommon_Words_from_Two_Sentences.cs" />
+    <Compile Include="HashTable_LC\Valid_Sudoku.cs" />
+    <Compile Include="LinkedList_LC\Add_Two_Numbers.cs" />
+    <Compile Include="LinkedList_LC\ListNode.cs" />
+    <Compile Include="LinkedList_LC\Merge_k_Sorted_Lists.cs" />
+    <Compile Include="LinkedList_LC\Merge_Two_Sorted_Lists.cs" />
+    <Compile Include="LinkedList_LC\Remove_Nth_Node_From_End_of_List.cs" />
+    <Compile Include="LinkedList_LC\Rotate_List.cs" />
+    <Compile Include="Math_LC\Clumsy_Factorial.cs" />
+    <Compile Include="Math_LC\Count_Primes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BinaryTree\Binary_Tree_Inorder_Traversal.cs" />
-    <Compile Include="BinaryTree\TreeNode.cs" />
-    <Compile Include="BinaryTree\Unique_Binary_Search_Trees_II.cs" />
+    <Compile Include="BinaryTree_LC\Binary_Tree_Inorder_Traversal.cs" />
+    <Compile Include="BinaryTree_LC\TreeNode.cs" />
+    <Compile Include="BinaryTree_LC\Unique_Binary_Search_Trees_II.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Solutions.Array
+namespace Solutions.Array_LC
 {
     public class Two_Sum
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Solutions.HashTable
+namespace Solutions.HashTable_LC
 {
     public class Valid_Sudoku
     {

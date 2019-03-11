@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Solutions.HashTable
+namespace Solutions.HashTable_LC
 {
     public class N_Repeated_Element_in_Size_2N_Array
     {

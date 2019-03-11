@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Solutions.HashTable
+namespace Solutions.HashTable_LC
 {
     public class Group_Anagrams
     {
@@ -13,7 +13,7 @@ namespace Solutions.HashTable
             foreach (string str in strs)
             {
                 char[] arr = str.ToCharArray();
-                System.Array.Sort(arr);
+                Array.Sort(arr);
                 string val = new String(arr);
                 if (!dic.ContainsKey(val))
                 {

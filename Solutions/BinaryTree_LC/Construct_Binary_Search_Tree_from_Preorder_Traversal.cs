@@ -1,4 +1,4 @@
-﻿namespace Solutions.BinaryTree
+﻿namespace Solutions.BinaryTree_LC
 {
     public class Construct_Binary_Search_Tree_from_Preorder_Traversal
     {

@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Array\Two_Sum_Test.cs" />
+    <Compile Include="Array_LC\Two_Sum_Test.cs" />
     <Compile Include="Execute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

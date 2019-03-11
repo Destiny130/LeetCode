@@ -1,4 +1,4 @@
-﻿namespace Solutions.BinaryTree
+﻿namespace Solutions.BinaryTree_LC
 {
     public class TreeNode
     {

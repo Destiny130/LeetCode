@@ -1,4 +1,4 @@
-﻿namespace Solutions.LinkedList
+﻿namespace Solutions.LinkedList_LC
 {
     public class Merge_Two_Sorted_Lists
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Solutions.Array;
+using Solutions.Array_LC;
 
-namespace TestCases.Array
+namespace TestCases.Array_LC
 {
     public class Two_Sum_Test
     {

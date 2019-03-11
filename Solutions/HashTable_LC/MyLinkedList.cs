@@ -1,4 +1,4 @@
-﻿namespace Solutions.HashTable
+﻿namespace Solutions.HashTable_LC
 {
     class MyLinkedList
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Solutions.LinkedList
+namespace Solutions.LinkedList_LC
 {
     public class Merge_k_Sorted_Lists
     {

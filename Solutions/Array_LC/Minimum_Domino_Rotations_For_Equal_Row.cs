@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Solutions.Array
+namespace Solutions.Array_LC
 {
     public class Minimum_Domino_Rotations_For_Equal_Row
     {

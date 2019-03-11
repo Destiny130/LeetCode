@@ -1,6 +1,6 @@
 using System;
 
-namespace Solutions.HashTable
+namespace Solutions.HashTable_LC
 {
     public class Find_the_Difference
     {
