@@ -48,6 +48,7 @@
     <Compile Include="HashTable_LC\Design_HashMap.cs" />
     <Compile Include="HashTable_LC\Design_HashSet.cs" />
     <Compile Include="HashTable_LC\DoublyLinkedList.cs" />
+    <Compile Include="HashTable_LC\Find_Duplicate_Subtrees.cs" />
     <Compile Include="HashTable_LC\Find_the_Difference.cs" />
     <Compile Include="HashTable_LC\Four_Sum_II.cs" />
     <Compile Include="HashTable_LC\Group_Anagrams.cs" />
