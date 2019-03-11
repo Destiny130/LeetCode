@@ -47,6 +47,7 @@
     <Compile Include="HashTable_LC\Design_HashSet.cs" />
     <Compile Include="HashTable_LC\DoublyLinkedList.cs" />
     <Compile Include="HashTable_LC\Find_the_Difference.cs" />
+    <Compile Include="HashTable_LC\Four_Sum_II.cs" />
     <Compile Include="HashTable_LC\Group_Anagrams.cs" />
     <Compile Include="HashTable_LC\MyLinkedList.cs" />
     <Compile Include="HashTable_LC\N_Repeated_Element_in_Size_2N_Array.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="BinaryTree_LC\Binary_Tree_Inorder_Traversal.cs" />
     <Compile Include="BinaryTree_LC\TreeNode.cs" />
     <Compile Include="BinaryTree_LC\Unique_Binary_Search_Trees_II.cs" />
+    <Compile Include="String_LC\Valid_Palindrome.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
