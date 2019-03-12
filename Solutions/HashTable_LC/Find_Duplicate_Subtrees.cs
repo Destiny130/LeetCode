@@ -46,5 +46,31 @@ namespace Solutions.HashTable_LC
                 dic[node] = NodeToString(node.left, dic) + node.val.ToString() + NodeToString(node.right, dic);
             return dic[node];
         }
+
+        public IList<TreeNode> FindDuplicateSubtrees_1(TreeNode root)
+        {
+            Dictionary<string, int> dic = new Dictionary<string, int>();
+            IList<TreeNode> result = new List<TreeNode>();
+            NodeToString(root, dic, result);
+            return result;
+        }
+
+        private string NodeToString(TreeNode node, Dictionary<string, int> dic, IList<TreeNode> list)
+        {
+            if (node == null)
+                return "#";
+            string str = node.val.ToString() + NodeToString(node.left, dic, list) + NodeToString(node.right, dic, list);
+            if (dic.ContainsKey(str))
+            {
+                if (dic[str] == 1)
+                    list.Add(node);
+                ++dic[str];
+            }
+            else
+            {
+                dic[str] = 1;
+            }
+            return str;
+        }
     }
 }
