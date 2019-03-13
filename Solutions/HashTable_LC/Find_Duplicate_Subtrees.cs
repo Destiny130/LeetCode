@@ -1,9 +1,6 @@
-﻿using Solutions.BinaryTree_LC;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Solutions.BinaryTree_LC;
 
 namespace Solutions.HashTable_LC
 {
@@ -47,6 +44,7 @@ namespace Solutions.HashTable_LC
             return dic[node];
         }
 
+        //Don't store TreeNode in dic
         public IList<TreeNode> FindDuplicateSubtrees_1(TreeNode root)
         {
             Dictionary<string, int> dic = new Dictionary<string, int>();
