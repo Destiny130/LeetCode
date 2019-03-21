@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestCases.Array_LC;
 
 namespace TestCases
@@ -11,8 +7,7 @@ namespace TestCases
     {
         static void Main()
         {
-            Two_Sum_Test.Execute();
-            Console.WriteLine("\n" + (3 ^ 3).ToString());
+            new Two_Sum_Test().Execute();
             Console.ReadKey();
         }
     }

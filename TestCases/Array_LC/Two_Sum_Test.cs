@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Solutions.Array_LC;
 
 namespace TestCases.Array_LC
 {
     public class Two_Sum_Test
     {
-        public static void Execute()
+        public void Execute()
         {
             int[] arr = { 2, 7, 11, 34, 3, 2 };
             Two_Sum twoSum = new Two_Sum();
