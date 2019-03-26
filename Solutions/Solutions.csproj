@@ -55,10 +55,13 @@
     <Compile Include="Array_LC\Two_Sum.cs" />
     <Compile Include="BinaryTree_LC\Construct_Binary_Search_Tree_from_Preorder_Traversal.cs" />
     <Compile Include="BinaryTree_LC\Increasing_Order_Search_Tree.cs" />
+    <Compile Include="Design_LC\Min_Stack.cs" />
     <Compile Include="DP_LC\Best_Sightseeing_Pair.cs" />
     <Compile Include="DP_LC\Best_Time_to_Buy_and_Sell_Stock.cs" />
     <Compile Include="DP_LC\Climbing_Stairs.cs" />
+    <Compile Include="DP_LC\House_Robber.cs" />
     <Compile Include="DP_LC\Longest_Palindromic_Substring.cs" />
+    <Compile Include="DP_LC\Maximum_Subarray.cs" />
     <Compile Include="DP_LC\Minimum_Path_Sum.cs" />
     <Compile Include="DP_LC\Unique_Paths.cs" />
     <Compile Include="DP_LC\Unique_Paths_II.cs" />
@@ -82,11 +85,14 @@
     <Compile Include="LinkedList_LC\Rotate_List.cs" />
     <Compile Include="Math_LC\Clumsy_Factorial.cs" />
     <Compile Include="Math_LC\Count_Primes.cs" />
+    <Compile Include="Math_LC\Fizz_Buzz.cs" />
+    <Compile Include="Math_LC\Power_of_Three.cs" />
     <Compile Include="Math_LC\Reverse_Integer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BinaryTree_LC\Binary_Tree_Inorder_Traversal.cs" />
     <Compile Include="BinaryTree_LC\TreeNode.cs" />
     <Compile Include="BinaryTree_LC\Unique_Binary_Search_Trees_II.cs" />
+    <Compile Include="String_LC\Count_and_Say.cs" />
     <Compile Include="String_LC\String_to_Integer_atoi.cs" />
     <Compile Include="String_LC\Valid_Palindrome.cs" />
   </ItemGroup>
