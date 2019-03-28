@@ -45,6 +45,7 @@
     <Compile Include="Array_LC\Two_Sum_Test.cs" />
     <Compile Include="DP_LC\Word_Break_Test.cs" />
     <Compile Include="Execute.cs" />
+    <Compile Include="Math_LC\Reverse_Bits_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
