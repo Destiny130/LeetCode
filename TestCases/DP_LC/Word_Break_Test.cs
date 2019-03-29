@@ -9,13 +9,14 @@ namespace TestCases.DP_LC
     {
         public void Execute()
         {
+            Console.WriteLine($"\n{nameof(Word_Break_Test)}");
             string s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
             IList<string> wordDict = new List<string>() { "a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa" };
             Stopwatch watch = new Stopwatch();
             watch.Start();
             Console.WriteLine($"{new Word_Break().WordBreak_DP(s, wordDict)}");
             watch.Stop();
-            Console.WriteLine($"spent: {watch.ElapsedMilliseconds} milliseconds\n");
+            Console.WriteLine($"spent: {watch.ElapsedMilliseconds} milliseconds");
         }
     }
 }
