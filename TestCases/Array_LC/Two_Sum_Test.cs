@@ -8,10 +8,11 @@ namespace TestCases.Array_LC
     {
         public void Execute()
         {
+            Console.WriteLine($"\n{nameof(Two_Sum_Test)}");
             int[] arr = { 2, 7, 11, 34, 3, 2 };
-            Two_Sum twoSum = new Two_Sum();
-            int[] result = twoSum.TwoSum(arr, 9);
-            Console.WriteLine($"{String.Join(", ", result)}\n");
+            int target = 9;
+            int[] result = new Two_Sum().TwoSum(arr, target);
+            Console.WriteLine($"Input array: {String.Join(", ", arr)}, target: {target.ToString()}\nResult: {String.Join(", ", result)}");
         }
     }
 }
