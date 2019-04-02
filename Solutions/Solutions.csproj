@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Array_LC\Best_Time_to_Buy_and_Sell_Stock_II.cs" />
     <Compile Include="Array_LC\Flipping_an_Image.cs" />
+    <Compile Include="Array_LC\Increasing_Triplet_Subsequence.cs" />
     <Compile Include="Array_LC\Intersection_of_Two_Arrays_II.cs" />
+    <Compile Include="Array_LC\Longest_Substring_Without_Repeating_Characters.cs" />
     <Compile Include="Array_LC\Majority_Element.cs" />
     <Compile Include="Array_LC\Merge_Sorted_Array.cs" />
     <Compile Include="Array_LC\Minimum_Domino_Rotations_For_Equal_Row.cs" />
@@ -56,9 +58,13 @@
     <Compile Include="Array_LC\Single_Number.cs" />
     <Compile Include="Array_LC\Two_Sum.cs" />
     <Compile Include="Array_LC\_3Sum.cs" />
+    <Compile Include="BinaryTree_LC\Binary_Tree_Zigzag_Level_Order_Traversal.cs" />
+    <Compile Include="BinaryTree_LC\Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.cs" />
     <Compile Include="BinaryTree_LC\Construct_Binary_Search_Tree_from_Preorder_Traversal.cs" />
     <Compile Include="BinaryTree_LC\Increasing_Order_Search_Tree.cs" />
     <Compile Include="BinaryTree_LC\Binary_Tree_Inorder_Traversal.cs" />
+    <Compile Include="BinaryTree_LC\Node.cs" />
+    <Compile Include="BinaryTree_LC\Populating_Next_Right_Pointers_in_Each_Node.cs" />
     <Compile Include="BinaryTree_LC\TreeNode.cs" />
     <Compile Include="BinaryTree_LC\Unique_Binary_Search_Trees_II.cs" />
     <Compile Include="Design_LC\Min_Stack.cs" />
