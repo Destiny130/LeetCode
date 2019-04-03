@@ -56,11 +56,14 @@
     <Compile Include="Array_LC\Rotate_Array.cs" />
     <Compile Include="Array_LC\Set_Matrix_Zeroes.cs" />
     <Compile Include="Array_LC\Single_Number.cs" />
+    <Compile Include="Array_LC\Sort_Colors.cs" />
+    <Compile Include="Array_LC\Top_K_Frequent_Elements.cs" />
     <Compile Include="Array_LC\Two_Sum.cs" />
     <Compile Include="Array_LC\_3Sum.cs" />
     <Compile Include="Backtracking_LC\Generate_Parentheses.cs" />
     <Compile Include="Backtracking_LC\Letter_Combinations_of_a_Phone_Number.cs" />
     <Compile Include="Backtracking_LC\Permutations.cs" />
+    <Compile Include="Backtracking_LC\Subsets_I.cs" />
     <Compile Include="Backtracking_LC\Word_Search.cs" />
     <Compile Include="BinaryTree_LC\Binary_Tree_Zigzag_Level_Order_Traversal.cs" />
     <Compile Include="BinaryTree_LC\Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.cs" />
