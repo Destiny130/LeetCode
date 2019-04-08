@@ -5,7 +5,13 @@ namespace Solutions.DP_LC
 {
     public class Unique_Paths
     {
-        public int UniquePaths(int m, int n)
+        /*
+        A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+        The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+        How many possible unique paths are there?
+        */
+
+        public int UniquePaths_Dic(int m, int n)
         {
             Dictionary<string, int> dic = new Dictionary<string, int>();
             Find(m, n, dic);
@@ -38,6 +44,24 @@ namespace Solutions.DP_LC
                 for (int j = 1; j < n; ++j)
                     matrix[i, j] = matrix[i - 1, j] + matrix[i, j - 1];
             return matrix[m - 1, n - 1];
+        }
+
+        public int UniquePaths(int m, int n)
+        {
+            int[,] dp = new int[m, n];
+            for (int i = 0; i < m; ++i)
+            {
+                for (int j = 0; j < n; ++j)
+                {
+                    if (i == 0)
+                        dp[0, j] = 1;
+                    else if (j == 0)
+                        dp[i, 0] = 1;
+                    else
+                        dp[i, j] = dp[i - 1, j] + dp[i, j - 1];
+                }
+            }
+            return dp[m - 1, n - 1];
         }
     }
 }
