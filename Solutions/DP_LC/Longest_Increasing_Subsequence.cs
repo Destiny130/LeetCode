@@ -28,5 +28,31 @@ namespace Solutions.DP_LC
             }
             return max;
         }
+
+        public int LengthOfLIS_1(int[] nums)
+        {
+            if (nums == null)
+                return 0;
+            int len = nums.Length, result = 0;
+            if (len < 2)
+                return len;
+            int[] dp = new int[len];
+            foreach (int i in nums)
+            {
+                int low = 0, high = result;
+                while (low < high)
+                {
+                    int mid = low + (high - low) / 2;
+                    if (dp[mid] < i)
+                        low = mid + 1;
+                    else
+                        high = mid;
+                }
+                dp[low] = i;
+                if (low == result)
+                    ++result;
+            }
+            return result;
+        }
     }
 }
