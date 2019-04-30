@@ -6,11 +6,9 @@ namespace Solutions.Math_LC
     {
         public int Divide(int dividend, int divisor)
         {
-            if (dividend == 0)
-                return 0;
-            else if (dividend == Int32.MinValue && divisor == -1)
+            if (dividend == Int32.MinValue && divisor == -1)
                 return Int32.MaxValue;
-            bool factor = (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0);
+            bool factor = (dividend < 0) == (divisor < 0);
             int result = 0;
             long did = Math.Abs((long)dividend), div = Math.Abs((long)divisor);
             while (did >= div)
@@ -25,7 +23,7 @@ namespace Solutions.Math_LC
                 did -= temp;
                 result += cnt;
             }
-            return factor ? -result : result;
+            return factor ? result : -result;
         }
     }
 }
