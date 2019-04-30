@@ -66,6 +66,7 @@
     <Compile Include="Backtracking_LC\Letter_Combinations_of_a_Phone_Number.cs" />
     <Compile Include="Backtracking_LC\Permutations.cs" />
     <Compile Include="Backtracking_LC\Subsets_I.cs" />
+    <Compile Include="Backtracking_LC\Word_Search_II.cs" />
     <Compile Include="Backtracking_LC\Word_Search.cs" />
     <Compile Include="BinarySearch_LC\Find_Peak_Element.cs" />
     <Compile Include="BinarySearch_LC\Search_in_Rotated_Sorted_Array.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="HashTable_LC\Uncommon_Words_from_Two_Sentences.cs" />
     <Compile Include="HashTable_LC\Valid_Sudoku.cs" />
     <Compile Include="LinkedList_LC\Add_Two_Numbers.cs" />
+    <Compile Include="LinkedList_LC\Copy_List_with_Random_Pointer.cs" />
     <Compile Include="LinkedList_LC\ListNode.cs" />
     <Compile Include="LinkedList_LC\Merge_k_Sorted_Lists.cs" />
     <Compile Include="LinkedList_LC\Merge_Two_Sorted_Lists.cs" />
@@ -114,9 +116,11 @@
     <Compile Include="LinkedList_LC\Rotate_List.cs" />
     <Compile Include="Math_LC\Clumsy_Factorial.cs" />
     <Compile Include="Math_LC\Count_Primes.cs" />
+    <Compile Include="Math_LC\Divide_Two_Integers.cs" />
     <Compile Include="Math_LC\Excel_Sheet_Column_Number.cs" />
     <Compile Include="Math_LC\Factorial_Trailing_Zeroes.cs" />
     <Compile Include="Math_LC\Fizz_Buzz.cs" />
+    <Compile Include="Math_LC\Fraction_to_Recurring_Decimal.cs" />
     <Compile Include="Math_LC\Hamming_Distance.cs" />
     <Compile Include="Math_LC\Number_of_1_Bits.cs" />
     <Compile Include="Math_LC\Pow_x__n_.cs" />
