@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array_LC\Best_Time_to_Buy_and_Sell_Stock_II.cs" />
+    <Compile Include="Array_LC\Container_With_Most_Water.cs" />
     <Compile Include="Array_LC\Flipping_an_Image.cs" />
+    <Compile Include="Array_LC\Game_of_Life.cs" />
     <Compile Include="Array_LC\Increasing_Triplet_Subsequence.cs" />
     <Compile Include="Array_LC\Intersection_of_Two_Arrays_II.cs" />
     <Compile Include="Array_LC\Longest_Substring_Without_Repeating_Characters.cs" />
@@ -53,12 +55,14 @@
     <Compile Include="Array_LC\Partition_Array_Into_Three_Parts_With_Equal_Sum.cs" />
     <Compile Include="Array_LC\Pascal_s_Triangle.cs" />
     <Compile Include="Array_LC\Plus_One.cs" />
+    <Compile Include="Array_LC\Product_of_Array_Except_Self.cs" />
     <Compile Include="Array_LC\Rotate_Image.cs" />
     <Compile Include="Array_LC\Rotate_Array.cs" />
     <Compile Include="Array_LC\Search_a_2D_Matrix_II.cs" />
     <Compile Include="Array_LC\Set_Matrix_Zeroes.cs" />
     <Compile Include="Array_LC\Single_Number.cs" />
     <Compile Include="Array_LC\Sort_Colors.cs" />
+    <Compile Include="Array_LC\Spiral_Matrix.cs" />
     <Compile Include="Array_LC\Top_K_Frequent_Elements.cs" />
     <Compile Include="Array_LC\Two_Sum.cs" />
     <Compile Include="Array_LC\_3Sum.cs" />
