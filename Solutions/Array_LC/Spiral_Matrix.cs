@@ -4,6 +4,10 @@ namespace Solutions.Array_LC
 {
     public class Spiral_Matrix
     {
+        /*
+        Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+        */
+
         public IList<int> SpiralOrder(int[][] matrix)
         {
             IList<int> list = new List<int>();
