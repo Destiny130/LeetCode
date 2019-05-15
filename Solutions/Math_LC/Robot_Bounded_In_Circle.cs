@@ -32,18 +32,21 @@ namespace Solutions.Math_LC
                             step[0] = -step[1];
                             step[1] = 0;
                         }
-                        else {
+                        else
+                        {
                             step[1] = step[0];
                             step[0] = 0;
                         }
                     }
-                    else {
+                    else
+                    {
                         if (step[0] == 0)
                         {
                             step[0] = step[1];
                             step[1] = 0;
                         }
-                        else {
+                        else
+                        {
                             step[1] = -step[0];
                             step[0] = 0;
                         }
@@ -54,7 +57,7 @@ namespace Solutions.Math_LC
             return point[0] == 0 && point[1] == 0;
         }
 
-        static int[][] dirs = new int[][] { new int[] { 0, 1 }, new int[] { -1, 0 }, new int[] { 0, -1 }, new int[] { 1, 0 } };
+        static readonly int[][] dirs = new int[][] { new int[] { 0, 1 }, new int[] { -1, 0 }, new int[] { 0, -1 }, new int[] { 1, 0 } };
 
         public bool IsRobotBounded_OneScan(string instructions)
         {

@@ -16,7 +16,10 @@ namespace Solutions.Array_LC
         {
             IList<IList<int>> result = new List<IList<int>>();
             if (nums == null || nums.Length < 4)
+            {
                 return result;
+            }
+
             Array.Sort(nums);
             int len = nums.Length;
             HashSet<string> set = new HashSet<string>();
@@ -33,18 +36,31 @@ namespace Solutions.Array_LC
                         {
                             IList<int> list = new List<int>() { nums[i], nums[j], nums[low], nums[high] };
                             if (set.Add(String.Join(",", list)))
+                            {
                                 result.Add(list);
+                            }
+
                             while (low < high && nums[low] == nums[low + 1])
+                            {
                                 ++low;
+                            }
+
                             while (low < high && nums[high - 1] == nums[high])
+                            {
                                 --high;
+                            }
+
                             ++low;
                             --high;
                         }
                         else if (sum < temp)
+                        {
                             ++low;
+                        }
                         else
+                        {
                             --high;
+                        }
                     }
                 }
             }
@@ -55,21 +71,36 @@ namespace Solutions.Array_LC
         {
             IList<IList<int>> result = new List<IList<int>>();
             if (nums == null || nums.Length < 4)
+            {
                 return result;
+            }
+
             Array.Sort(nums);
             int len = nums.Length;
             for (int i = 0; i < len - 3; ++i)
             {
                 if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target)  //Min sum greater than target
+                {
                     break;
+                }
+
                 if (nums[i] + nums[len - 1] + nums[len - 2] + nums[len - 3] < target)  //Max sum lesser than target
+                {
                     continue;
+                }
+
                 if (i > 0 && nums[i] == nums[i - 1])  //First number is used in previous loop
+                {
                     continue;
+                }
+
                 for (int j = i + 1; j < len - 2; ++j)
                 {
                     if (j > i + 1 && nums[j] == nums[j - 1])  //Second number is used in previous loop
+                    {
                         continue;
+                    }
+
                     int low = j + 1, high = len - 1;
                     int temp = target - nums[i] - nums[j];
                     while (low < high)
@@ -80,16 +111,26 @@ namespace Solutions.Array_LC
                             IList<int> list = new List<int>() { nums[i], nums[j], nums[low], nums[high] };
                             result.Add(list);
                             while (low < high && nums[low] == nums[low + 1])
+                            {
                                 ++low;
+                            }
+
                             while (low < high && nums[high - 1] == nums[high])
+                            {
                                 --high;
+                            }
+
                             ++low;
                             --high;
                         }
                         else if (sum < temp)
+                        {
                             ++low;
+                        }
                         else
+                        {
                             --high;
+                        }
                     }
                 }
             }
@@ -103,7 +144,10 @@ namespace Solutions.Array_LC
         {
             IList<IList<int>> result = new List<IList<int>>();
             if (nums == null || (len = nums.Length) < k)
+            {
                 return result;
+            }
+
             Array.Sort(nums);
             KSumRecursive(nums, target, k, 0, result, new List<int>());
             return result;
@@ -124,16 +168,26 @@ namespace Solutions.Array_LC
                         temp.Add(nums[high]);
                         result.Add(temp);
                         while (low < high && nums[low] == nums[low + 1])
+                        {
                             ++low;
+                        }
+
                         while (low < high && nums[high] == nums[high - 1])
+                        {
                             --high;
+                        }
+
                         ++low;
                         --high;
                     }
                     else if (sum > target)
+                    {
                         --high;
+                    }
                     else
+                    {
                         ++low;
+                    }
                 }
             }
             else
@@ -141,7 +195,10 @@ namespace Solutions.Array_LC
                 for (int i = p; i < len - k + 1; ++i)
                 {
                     if (i > p && nums[i] == nums[i - 1])
+                    {
                         continue;
+                    }
+
                     list.Add(nums[i]);
                     KSumRecursive(nums, target, k - 1, i + 1, result, list);
                     list.RemoveAt(list.Count - 1);

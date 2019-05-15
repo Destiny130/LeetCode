@@ -28,10 +28,16 @@ namespace Solutions.Array_LC
             while (i < len)
             {
                 while (i < len && prices[i + 1] <= prices[i])
+                {
                     ++i;
+                }
+
                 int buy = prices[i];
                 while (i < len && prices[i + 1] > prices[i])
+                {
                     ++i;
+                }
+
                 int sell = prices[i];
                 profit += sell - buy;
             }
@@ -46,10 +52,16 @@ namespace Solutions.Array_LC
             while (i < len)
             {
                 while (i < len && prices[i + 1] <= prices[i])
+                {
                     ++i;
+                }
+
                 int buy = prices[i];
                 while (i < len && prices[i + 1] > prices[i])
+                {
                     ++i;
+                }
+
                 int sell = prices[i];
                 profit += sell - buy;
                 list.Add(new Tuple<int, int>(buy, sell));

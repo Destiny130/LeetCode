@@ -19,13 +19,22 @@ namespace Solutions.Array_LC
                 {
                     int sum = nums[i] + nums[low] + nums[high];
                     if (sum == target)
+                    {
                         return sum;
+                    }
                     else if (sum > target)
+                    {
                         --high;
+                    }
                     else
+                    {
                         ++low;
+                    }
+
                     if (Math.Abs(target - sum) < Math.Abs(target - result))
+                    {
                         result = sum;
+                    }
                 }
             }
 

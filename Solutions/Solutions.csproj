@@ -70,6 +70,8 @@
     <Compile Include="Array_LC\Top_K_Frequent_Elements.cs" />
     <Compile Include="Array_LC\Two_Sum.cs" />
     <Compile Include="Array_LC\_3Sum.cs" />
+    <Compile Include="Array_LC\_3Sum_Closest.cs" />
+    <Compile Include="Array_LC\_4Sum.cs" />
     <Compile Include="Backtracking_LC\Generate_Parentheses.cs" />
     <Compile Include="Backtracking_LC\Letter_Combinations_of_a_Phone_Number.cs" />
     <Compile Include="Backtracking_LC\Permutations.cs" />
@@ -135,6 +137,7 @@
     <Compile Include="Math_LC\Power_of_Three.cs" />
     <Compile Include="Math_LC\Reverse_Bits.cs" />
     <Compile Include="Math_LC\Reverse_Integer.cs" />
+    <Compile Include="Math_LC\Robot_Bounded_In_Circle.cs" />
     <Compile Include="Math_LC\Roman_to_Integer.cs" />
     <Compile Include="Math_LC\Sqrt_x_.cs" />
     <Compile Include="Math_LC\Sum_of_Two_Integers.cs" />
