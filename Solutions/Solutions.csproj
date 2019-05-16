@@ -55,6 +55,7 @@
     <Compile Include="Array_LC\Merge_Sorted_Array.cs" />
     <Compile Include="Array_LC\Minimum_Domino_Rotations_For_Equal_Row.cs" />
     <Compile Include="Array_LC\Move_Zeroes.cs" />
+    <Compile Include="Array_LC\Next_Permutation.cs" />
     <Compile Include="Array_LC\Partition_Array_Into_Three_Parts_With_Equal_Sum.cs" />
     <Compile Include="Array_LC\Pascal_s_Triangle.cs" />
     <Compile Include="Array_LC\Plus_One.cs" />
@@ -68,10 +69,13 @@
     <Compile Include="Array_LC\Sort_Colors.cs" />
     <Compile Include="Array_LC\Spiral_Matrix.cs" />
     <Compile Include="Array_LC\Top_K_Frequent_Elements.cs" />
+    <Compile Include="Array_LC\Trapping_Rain_Water.cs" />
     <Compile Include="Array_LC\Two_Sum.cs" />
     <Compile Include="Array_LC\_3Sum.cs" />
     <Compile Include="Array_LC\_3Sum_Closest.cs" />
     <Compile Include="Array_LC\_4Sum.cs" />
+    <Compile Include="Backtracking_LC\Combination_Sum_II.cs" />
+    <Compile Include="Backtracking_LC\Combination_Sum.cs" />
     <Compile Include="Backtracking_LC\Generate_Parentheses.cs" />
     <Compile Include="Backtracking_LC\Letter_Combinations_of_a_Phone_Number.cs" />
     <Compile Include="Backtracking_LC\Permutations.cs" />
