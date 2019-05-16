@@ -27,14 +27,13 @@ namespace Solutions.Backtracking_LC
             {
                 result.Add(new List<int>(list));
             }
-            else if (target > 0)
+            for (int i = p; i < nums.Length; ++i)
             {
-                for (int i = p; i < nums.Length; ++i)
-                {
-                    list.Add(nums[i]);
-                    Recursive(nums, i, target - nums[i], result, list);
-                    list.RemoveAt(list.Count - 1);
-                }
+                if (nums[i] > target)
+                    continue;
+                list.Add(nums[i]);
+                Recursive(nums, i, target - nums[i], result, list);
+                list.RemoveAt(list.Count - 1);
             }
         }
     }
