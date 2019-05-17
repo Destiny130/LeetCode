@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Solutions.Array_LC
 {
@@ -8,75 +9,83 @@ namespace Solutions.Array_LC
         Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
         */
 
-        public int Trap(int[] height)
+        public int Trap_BF(int[] height)
         {
             if (height == null || height.Length < 3)
                 return 0;
-            int len = height.Length, water = 0;
-            for (int i = 0; i < len;)
+            int water = 0, len = height.Length;
+            for (int i = 1; i < len - 1; ++i)
             {
-                while (i < len - 1 && height[i] <= height[i + 1])
-                    ++i;
-                if (i == len - 1)
-                    break;
-                int j = i + 2;
-                while (j < len - 1 && height[j] <= height[j + 1])
-                    ++j;
-                if (j == len - 1 && height[j] <= height[i + 1])
-                {
-                    if (height[j + 1] <= height[i + 1])
-                        break;
-                    else
-                        ++j;
-                }
-                water += Water(height, i, j);
+                int maxL = 0, maxR = 0;
+                for (int j = i; j >= 0; --j)
+                    maxL = Math.Max(maxL, height[j]);
+                for (int j = i; j < len; ++j)
+                    maxR = Math.Max(maxR, height[j]);
+                water += Math.Min(maxL, maxR) - height[i];
             }
             return water;
         }
 
-        public int Trap_DP (int[] height)
+        public int Trap_DP(int[] height)
         {
-            return Trap_DP(height, 0, height.Length - 1);
-        }
-
-        private int Trap_DP(int[] height, int low, int high)
-        {
-            Console.WriteLine($"low: {low}, high: {high}");
-            if (low < 0 || high >= height.Length || high - low < 2)
+            if (height == null || height.Length < 3)
                 return 0;
-            int i = low, j = high, water = 0;
-            int start = low, end = high;
-            while (start + 1 < end)
-            {
-                if (height[start] == 0 || height[start] == height[start + 1])
-                    ++start;
-                else if (height[end] == 0 || height[end] == height[end - 1])
-                    --end;
-                else {
-                    int temp = Water(height, start, end);
-                    if (temp > water)
-                    {
-                        i = start;
-                        j = end;
-                        water = temp;
-                    }
-                    if (height[start] > height[end])
-                        --end;
-                    else
-                        ++start;
-                }
-            }
-            Console.WriteLine($"water: {water}");
-            return Trap_DP(height, low, i) + water + Trap_DP(height, j, high);
+            int water = 0, len = height.Length;
+            int[] leftArr = new int[len], rightArr = new int[len];
+            leftArr[0] = height[0];
+            rightArr[len - 1] = height[len - 1];
+            for (int i = 1; i < len; ++i)
+                leftArr[i] = Math.Max(height[i], leftArr[i - 1]);
+            for (int i = len - 2; i >= 0; --i)
+                rightArr[i] = Math.Max(height[i], rightArr[i + 1]);
+            for (int i = 0; i < len; ++i)
+                water += Math.Min(leftArr[i], rightArr[i]) - height[i];
+            return water;
         }
 
-        private int Water(int[] height, int low, int high)
+        public int Trap_Stack(int[] height)
         {
-            int min = Math.Min(height[low], height[high]);
-            int water = 0;
-            for (int i = low + 1; i < high; ++i)
+            if (height == null || height.Length < 3)
+                return 0;
+            int water = 0, len = height.Length, i = 0;
+            Stack<int> stack = new Stack<int>();
+            while (i < len)
             {
-                water += Math.Max(0, min - height[i]);
+                while (stack.Count != 0 && height[i] > height[stack.Peek()])
+                {
+                    int p = stack.Pop();
+                    if (stack.Count == 0)
+                        break;
+                    int dis = i - stack.Peek() - 1;
+                    int temp = Math.Min(height[i], height[stack.Peek()]) - height[p];
+                    water += dis * temp;
+                }
+                stack.Push(i++);
+            }
+            return water;
+        }
+
+        public int Trap_TwoPoints(int[] height)
+        {
+            if (height == null || height.Length < 3)
+                return 0;
+            int water = 0, low = 0, high = height.Length - 1;
+            int maxL = 0, maxR = 0;
+            while (low < high)
+            {
+                if (height[low] < height[high])
+                {
+                    if (height[low] >= maxL)
+                        maxL = height[low++];
+                    else
+                        water += maxL - height[low++];
+                }
+                else {
+                    if (height[high] >= maxR)
+                        maxR = height[high--];
+                    else
+                        water += maxR - height[high--];
+                }
             }
             return water;
         }
