@@ -102,6 +102,7 @@
     <Compile Include="DP_LC\Climbing_Stairs.cs" />
     <Compile Include="DP_LC\Coin_Change.cs" />
     <Compile Include="DP_LC\House_Robber.cs" />
+    <Compile Include="DP_LC\Jump_Game_II.cs" />
     <Compile Include="DP_LC\Jump_Game.cs" />
     <Compile Include="DP_LC\Longest_Increasing_Subsequence.cs" />
     <Compile Include="DP_LC\Longest_Palindromic_Substring.cs" />
