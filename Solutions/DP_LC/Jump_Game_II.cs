@@ -39,7 +39,12 @@ namespace Solutions.DP_LC
             for (int i = 0, reach = 0, prev = 0; i < len - 1; ++i)
             {
                 reach = Math.Max(reach, i + nums[i]);
-                if (i == prev)
+                if (reach >= len - 1)
+                {
+                    ++count;
+                    break;
+                }
+                else if (i == prev)
                 {
                     ++count;
                     prev = reach;
