@@ -47,6 +47,7 @@
     <Compile Include="Array_LC\Flipping_an_Image.cs" />
     <Compile Include="Array_LC\Game_of_Life.cs" />
     <Compile Include="Array_LC\Increasing_Triplet_Subsequence.cs" />
+    <Compile Include="Array_LC\Insert_Interval.cs" />
     <Compile Include="Array_LC\Intersection_of_Two_Arrays_II.cs" />
     <Compile Include="Array_LC\Longest_Consecutive_Sequence.cs" />
     <Compile Include="Array_LC\Longest_Substring_Without_Repeating_Characters.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Array_LC\Set_Matrix_Zeroes.cs" />
     <Compile Include="Array_LC\Single_Number.cs" />
     <Compile Include="Array_LC\Sliding_Window_Maximum.cs" />
+    <Compile Include="Array_LC\Sort_an_Array.cs" />
     <Compile Include="Array_LC\Sort_Colors.cs" />
     <Compile Include="Array_LC\Spiral_Matrix.cs" />
     <Compile Include="Array_LC\Top_K_Frequent_Elements.cs" />
