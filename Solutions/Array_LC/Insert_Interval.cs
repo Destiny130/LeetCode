@@ -59,11 +59,19 @@ namespace Solutions.Array_LC
                 result.Add(newInterval);
                 return result.ToArray();
             }
-            //int i = 0, len = intervals.Length;
+            int i = 0, len = intervals.Length;
+            while (i < len && intervals[i][1] < newInterval[0])
+                result.Add(intervals[i++]);
 
+            while (i < len && intervals[i][0] <= newInterval[1])
+            {
+                newInterval[0] = Math.Min(newInterval[0], intervals[i][0]);
+                newInterval[1] = Math.Max(newInterval[1], intervals[i++][1]);
+            }
+            result.Add(newInterval);
 
-
-
+            while (i < len)
+                result.Add(intervals[i++]);
 
             return result.ToArray();
         }
