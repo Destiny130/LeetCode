@@ -96,6 +96,7 @@
     <Compile Include="BinaryTree_LC\Populating_Next_Right_Pointers_in_Each_Node.cs" />
     <Compile Include="BinaryTree_LC\TreeNode.cs" />
     <Compile Include="BinaryTree_LC\Unique_Binary_Search_Trees_II.cs" />
+    <Compile Include="BinaryTree_LC\Validate_Binary_Search_Tree.cs" />
     <Compile Include="Design_LC\Min_Stack.cs" />
     <Compile Include="Design_LC\Shuffle_an_Array.cs" />
     <Compile Include="DFS_LC\Number_of_Islands.cs" />
