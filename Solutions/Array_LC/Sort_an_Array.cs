@@ -1,9 +1,14 @@
 using System;
+using System.Collections.Generic;
 
 namespace Solutions.Array_LC
 {
     public class Sort_an_Array
     {
+        /*
+        Given an array of integers nums, sort the array in ascending order.
+        */
+
         public int[] SortArray_SystemLibrary(int[] nums)
         {
             Array.Sort(nums);
@@ -37,8 +42,32 @@ namespace Solutions.Array_LC
         {
             if (nums == null || nums.Length < 2)
                 return nums;
-
-            return null;
+            Queue<int[]> queue = new Queue<int[]>();
+            for (int i = 0; i < nums.Length; ++i)
+            {
+                int[] arr = new int[1];
+                Array.Copy(nums, i, arr, 0, 1);
+                queue.Enqueue(arr);
+            }
+            while (queue.Count > 1)
+            {
+                int count = queue.Count;
+                for (int i = 0; i < count; ++i)
+                {
+                    if (i != count - 1)
+                    {
+                        int[] firstArr = queue.Dequeue();
+                        int[] secondArr = queue.Dequeue();
+                        int[] mergeArr = Merge(firstArr, secondArr);
+                        queue.Enqueue(mergeArr);
+                    }
+                    else
+                    {
+                        queue.Enqueue(queue.Dequeue());
+                    }
+                }
+            }
+            return queue.Dequeue();
         }
 
         private int[] Merge(int[] arr1, int[] arr2)
