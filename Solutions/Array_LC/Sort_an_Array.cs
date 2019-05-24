@@ -9,12 +9,14 @@ namespace Solutions.Array_LC
         Given an array of integers nums, sort the array in ascending order.
         */
 
+        //Using system library
         public int[] SortArray_SystemLibrary(int[] nums)
         {
             Array.Sort(nums);
             return nums;
         }
 
+        //Devide and conquer, top down
         public int[] SortArray_TopDown(int[] nums)
         {
             if (nums == null || nums.Length < 2)
@@ -38,6 +40,7 @@ namespace Solutions.Array_LC
             return Merge(leftArr, rightArr);
         }
 
+        //Devide and conquer, bottom up
         public int[] SortArray_BottomUp(int[] nums)
         {
             if (nums == null || nums.Length < 2)
@@ -85,11 +88,79 @@ namespace Solutions.Array_LC
             return result;
         }
 
+        //Quick sort, using extra space
+        public int[] SortArray_QuickSort(int[] nums)
+        {
+            if (nums == null || nums.Length < 2)
+                return nums;
+            int pivot = nums[0];
+            List<int> leftList = new List<int>(), rightList = new List<int>();
+            for (int i = 1; i < nums.Length; ++i)
+            {
+                int val = nums[i];
+                if (val <= pivot)
+                    leftList.Add(val);
+                else
+                    rightList.Add(val);
+            }
+
+            int[] leftArr = SortArray_QuickSort(leftList.ToArray());
+            int[] rightArr = SortArray_QuickSort(rightList.ToArray());
+            return Merge(leftArr, pivot, rightArr);
+        }
+
+        private int[] Merge(int[] arr1, int pivot, int[] arr2)
+        {
+            int[] result = new int[arr1.Length + 1 + arr2.Length];
+            int i = 0, j = 0, k = 0;
+            while (i < arr1.Length)
+                result[k++] = arr1[i++];
+            result[k++] = pivot;
+            while (j < arr2.Length)
+                result[k++] = arr2[j++];
+            return result;
+        }
+
+        //Quick sort, modify original array
+        public int[] SortArray_QuickSort_Swap(int[] nums)
+        {
+            if (nums == null)
+                return nums;
+            Partition(nums, 0, nums.Length - 1);
+            return nums;
+        }
+
+        private void Partition(int[] nums, int low, int high)
+        {
+            if (low < high)
+            {
+                int pivot = QuickSort(nums, low, high);
+                Partition(nums, low, pivot - 1);
+                Partition(nums, pivot + 1, high);
+            }
+        }
+
+        private int QuickSort(int[] nums, int low, int high)
+        {
+            int pivot = nums[high];
+            int i = low;
+            for (int j = low; j < high; ++j)
+            {
+                if (nums[j] < pivot)
+                {
+                    Swap(nums, i++, j);
+                }
+            }
+            Swap(nums, i, high);
+            return i;
+        }
+
         private void Swap(int[] nums, int i, int j)
         {
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
         }
+
     }
 }
