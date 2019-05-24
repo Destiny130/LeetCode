@@ -56,5 +56,30 @@ namespace Solutions.Array_LC
                     SearchMatrix(matrix, target, rowMid + 1, rowHigh, columnLow, columnMid);
             }
         }
+
+        private bool SearchMatrix_Optimize(int[,] matrix, int target, int rowLow, int rowHigh, int columnLow, int columnHigh)
+        {
+            if (rowLow > rowHigh || columnLow > columnHigh)
+                return false;
+            int rowMid = (rowLow + rowHigh) / 2, columnMid = (columnLow + columnHigh) / 2;
+            if (matrix[rowMid, columnMid] == target)
+                return true;
+            else if (matrix[rowMid, columnMid] > target)
+            {
+                int visit = rowMid - 1;
+                while (visit >= rowLow && matrix[visit, columnMid] > target)
+                    --visit;
+                return (visit >= rowLow && (matrix[visit, columnMid] == target || SearchMatrix_Optimize(matrix, target, rowLow, visit, columnMid + 1, columnHigh))) ||
+                    SearchMatrix_Optimize(matrix, target, visit + 1, rowHigh, columnLow, columnMid - 1);
+            }
+            else
+            {
+                int visit = rowMid + 1;
+                while (visit <= rowHigh && matrix[visit, columnMid] < target)
+                    ++visit;
+                return (visit <= rowHigh && (matrix[visit, columnMid] == target || SearchMatrix_Optimize(matrix, target, visit, rowHigh, columnLow, columnMid - 1))) ||
+                    SearchMatrix_Optimize(matrix, target, rowLow, visit - 1, columnMid + 1, columnHigh);
+            }
+        }
     }
 }
