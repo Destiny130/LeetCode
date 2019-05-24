@@ -18,9 +18,13 @@ namespace Solutions.Array_LC
             {
                 water = Math.Max(water, Math.Min(height[i], height[j]) * (j - i));
                 if (height[i] < height[j])
+                {
                     ++i;
+                }
                 else
+                {
                     --j;
+                }
             }
             return water;
         }

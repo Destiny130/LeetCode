@@ -20,11 +20,16 @@ namespace Solutions.Array_LC
         public int[] SortArray_TopDown(int[] nums)
         {
             if (nums == null || nums.Length < 2)
+            {
                 return nums;
+            }
             else if (nums.Length == 2)
             {
                 if (nums[0] > nums[1])
+                {
                     Swap(nums, 0, 1);
+                }
+
                 return nums;
             }
 
@@ -44,7 +49,10 @@ namespace Solutions.Array_LC
         public int[] SortArray_BottomUp(int[] nums)
         {
             if (nums == null || nums.Length < 2)
+            {
                 return nums;
+            }
+
             Queue<int[]> queue = new Queue<int[]>();
             for (int i = 0; i < nums.Length; ++i)
             {
@@ -82,9 +90,15 @@ namespace Solutions.Array_LC
                 result[k++] = arr1[i] <= arr2[j] ? arr1[i++] : arr2[j++];
             }
             while (i < arr1.Length)
+            {
                 result[k++] = arr1[i++];
+            }
+
             while (j < arr2.Length)
+            {
                 result[k++] = arr2[j++];
+            }
+
             return result;
         }
 
@@ -92,16 +106,23 @@ namespace Solutions.Array_LC
         public int[] SortArray_QuickSort(int[] nums)
         {
             if (nums == null || nums.Length < 2)
+            {
                 return nums;
+            }
+
             int pivot = nums[0];
             List<int> leftList = new List<int>(), rightList = new List<int>();
             for (int i = 1; i < nums.Length; ++i)
             {
                 int val = nums[i];
                 if (val <= pivot)
+                {
                     leftList.Add(val);
+                }
                 else
+                {
                     rightList.Add(val);
+                }
             }
 
             int[] leftArr = SortArray_QuickSort(leftList.ToArray());
@@ -114,10 +135,16 @@ namespace Solutions.Array_LC
             int[] result = new int[arr1.Length + 1 + arr2.Length];
             int i = 0, j = 0, k = 0;
             while (i < arr1.Length)
+            {
                 result[k++] = arr1[i++];
+            }
+
             result[k++] = pivot;
             while (j < arr2.Length)
+            {
                 result[k++] = arr2[j++];
+            }
+
             return result;
         }
 
@@ -125,7 +152,10 @@ namespace Solutions.Array_LC
         public int[] SortArray_QuickSort_Swap(int[] nums)
         {
             if (nums == null)
+            {
                 return nums;
+            }
+
             Partition(nums, 0, nums.Length - 1);
             return nums;
         }

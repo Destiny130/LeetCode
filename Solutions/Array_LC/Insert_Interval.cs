@@ -25,11 +25,18 @@ namespace Solutions.Array_LC
             {
                 int mid = low + (high - low) / 2;
                 if (mid == -1 || mid == len)
+                {
                     break;
+                }
+
                 if (list[mid][0] > newInterval[0])
+                {
                     high = mid - 1;
+                }
                 else
+                {
                     low = mid + 1;
+                }
             }
             list.Insert(low, newInterval);
             List<int[]> result = new List<int[]>();
@@ -61,7 +68,9 @@ namespace Solutions.Array_LC
             }
             int i = 0, len = intervals.Length;
             while (i < len && intervals[i][1] < newInterval[0])
+            {
                 result.Add(intervals[i++]);
+            }
 
             while (i < len && intervals[i][0] <= newInterval[1])
             {
@@ -71,7 +80,9 @@ namespace Solutions.Array_LC
             result.Add(newInterval);
 
             while (i < len)
+            {
                 result.Add(intervals[i++]);
+            }
 
             return result.ToArray();
         }
