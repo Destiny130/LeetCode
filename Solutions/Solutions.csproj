@@ -81,6 +81,7 @@
     <Compile Include="Backtracking_LC\Combination_Sum.cs" />
     <Compile Include="Backtracking_LC\Generate_Parentheses.cs" />
     <Compile Include="Backtracking_LC\Letter_Combinations_of_a_Phone_Number.cs" />
+    <Compile Include="Backtracking_LC\N_Queens_II.cs" />
     <Compile Include="Backtracking_LC\Permutations.cs" />
     <Compile Include="Backtracking_LC\Subsets_I.cs" />
     <Compile Include="Backtracking_LC\Word_Search_II.cs" />
