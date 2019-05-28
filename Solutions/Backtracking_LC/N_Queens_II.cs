@@ -39,5 +39,36 @@ namespace Solutions.Backtracking_LC
             }
             return true;
         }
+
+        //Using array store usage status
+        public int TotalNQueens_Optimize(int n)
+        {
+            return Backtracing(new bool[5 * n], 0, n);
+        }
+
+        private int Backtracing(bool[] dp, int p, int n)
+        {
+            if (p == n)
+                return 1;
+
+            int count = 0;
+            for (int i = 0; i < n; ++i)
+            {
+                int column = i, d1 = i - p + n * 2, d2 = i + p + n * 3;
+                if (!dp[column] && !dp[d1] && !dp[d2])
+                {
+                    SetValue(dp, true, column, d1, d2);
+                    count += Backtracing(dp, p + 1, n);
+                    SetValue(dp, false, column, d1, d2);
+                }
+            }
+            return count;
+        }
+
+        private void SetValue(bool[] arr, bool value, params int[] indices)
+        {
+            foreach (int i in indices)
+                arr[i] = value;
+        }
     }
 }
