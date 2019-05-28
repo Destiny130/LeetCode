@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Solutions.Backtracking_LC
 {
@@ -9,70 +9,59 @@ namespace Solutions.Backtracking_LC
         {
             IList<IList<string>> result = new List<IList<string>>();
 
-            char[][] matrix = new char[n][];
+            char[,] matrix = new char[n, n];
             for (int i = 0; i < n; ++i)
-                matrix[i] = new char[n];
+            {
+                for (int j = 0; j < n; ++j)
+                {
+                    matrix[i, j] = '.';
+                }
+            }
             Backtracing(matrix, 0, n, result);
 
             return result;
         }
 
-        private void Backtracing(char[][] matrix, int p, int n, IList<IList<string>> result)
+        private void Backtracing(char[,] matrix, int p, int n, IList<IList<string>> result)
         {
+            if (p == n)
+            {
+                List<string> list = new List<string>();
+                for (int i = 0; i < n; ++i)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    for (int j = 0; j < n; ++j)
+                    {
+                        sb.Append(matrix[i, j]);
+                    }
+                    list.Add(sb.ToString());
+                }
+                result.Add(list);
+                return;
+            }
+
             for (int i = 0; i < n; ++i)
             {
                 if (CanPut(matrix, n, p, i))
                 {
-                    matrix[p][i] = 'Q';
-                    if (p == n - 1)
-                    {
-                        //Add to result
-                        AddToResult(matrix, n, result);
-                    }
-                    else
-                    {
-                        //Go to next depth
-                        Backtracing(matrix, p + 1, n, result);
-                    }
-                    matrix[p][i] = Char.MinValue;
+                    matrix[p, i] = 'Q';
+                    Backtracing(matrix, p + 1, n, result);
+                    matrix[p, i] = '.';
                 }
             }
         }
 
-        static List<int[]> dirs = new List<int[]>()
+        private bool CanPut(char[,] matrix, int n, int x, int y)
         {
-            new int[] {-1, 0 },
-            new int[] {-1, 1 },
-            new int[] {0, 1 },
-            new int[] {1, 1 },
-            new int[] {1, 0 },
-            new int[] {-1, -1 },
-            new int[] {0, -1 },
-            new int[] {-1, -1 },
-        };
-
-        private bool CanPut(char[][] matrix, int n, int x, int y)
-        {
-            foreach (int[] dir in dirs)
+            for (int k = -1; k < 2; ++k)
             {
-                for (int i = x, j = y; i >= 0 && i < n && j >= 0 && j < n; i += dir[0], j += dir[1])
+                for (int i = x, j = y; i >= 0 && j >= 0 && j < n; --i, j += k)
                 {
-                    if (matrix[i][j] == 'Q')
+                    if (matrix[i, j] == 'Q')
                         return false;
                 }
             }
             return true;
-        }
-
-        private void AddToResult(char[][] matrix, int n, IList<IList<string>> result)
-        {
-            IList<string> list = new List<string>();
-            for (int i = 0; i < n; ++i)
-            {
-                string row = String.Join("", matrix[i]).Replace(Char.MinValue, '.');
-                list.Add(row);
-            }
-            result.Add(list);
         }
     }
 }
