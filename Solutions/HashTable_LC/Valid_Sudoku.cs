@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace Solutions.HashTable_LC
 {
@@ -38,6 +38,46 @@ namespace Solutions.HashTable_LC
                                                || !set.Add(board[i, j] + "in column" + j.ToString())
                                                || !set.Add(board[i, j] + "in block" + i / 3 + "-" + j / 3)))
                         return false;
+                }
+            }
+            return true;
+        }
+
+        public bool IsValidSudoku(char[][] board)
+        {
+            for (int i = 0; i < 9; ++i)
+            {
+                bool[] record = new bool[27];
+                for (int j = 0; j < 9; ++j)
+                {
+                    char row = board[i][j];
+                    if (row != '.')
+                    {
+                        if (record[row - '1'])
+                            return false;
+                        else
+                            record[row - '1'] = true;
+                    }
+
+                    char column = board[j][i];
+                    if (column != '.')
+                    {
+                        if (record[column - '1' + 9])
+                            return false;
+                        else
+                            record[column - '1' + 9] = true;
+                    }
+
+                    int x = (i / 3) * 3 + j / 3;
+                    int y = (i % 3) * 3 + j % 3;
+                    char block = board[x][y];
+                    if (block != '.')
+                    {
+                        if (record[block - '1' + 18])
+                            return false;
+                        else
+                            record[block - '1' + 18] = true;
+                    }
                 }
             }
             return true;
