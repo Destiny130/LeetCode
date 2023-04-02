@@ -120,6 +120,7 @@
     <Compile Include="DP_LC\Unique_Paths.cs" />
     <Compile Include="DP_LC\Unique_Paths_II.cs" />
     <Compile Include="DP_LC\Word_Break.cs" />
+    <Compile Include="Graph_LC\Is_Graph_Bipartite.cs" />
     <Compile Include="HashTable_LC\Design_HashMap.cs" />
     <Compile Include="HashTable_LC\Design_HashSet.cs" />
     <Compile Include="HashTable_LC\DoublyLinkedList.cs" />
